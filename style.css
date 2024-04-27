@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+
+:root {
+  --main-color: #cb0101;
+  --text-color: #030303;
+  --bg-color: #f0f0f0;
+}
+
+.dark-theme {
+  --main-color: #cb0101;
+  --text-color: #f0f0f0;
+  --bg-color: #030303;
+}
+
+body {
+  font-family: "Annie Use Your Telescope", cursive;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--bg-color);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0rem;
+  position: relative;
+}
+
+button,
+input {
+    border-radius: 8px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1.5em;
+    font-family: "Annie Use Your Telescope", cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+#ageInput {
+    gap: 50px;
+}
+
+input {
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+button {
+    align-items: center;
+    border: none;
+    margin-left: 2.5em;
+}
+
+#title {
+    font-family: "Annie Use Your Telescope", cursive;
+    font-size: 3em;
+    font-weight: 400;
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#search {
+    animation: floatDown 2s infinite;
+    font-size: 1em;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Annie Use Your Telescope", cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    cursor: pointer;
+    color: var(--text-color);
+    background: linear-gradient(to right, var(--bg-color) 50%, var(--text-color) 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.35s ease-in-out, color 0.35s ease-in-out;
+}
+  
+#search:hover {
+    background-position: -100% 0;
+    color: var(--main-color);
+}
+
+#moon,
+#sun {
+  text-decoration: none;
+  animation: floatUp 2s infinite;
+  font-size: 1.25em;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  color: var(--text-color);
+  background: linear-gradient(to right, var(--bg-color) 50%, var(--text-color) 50%);
+  background-size: 200% 100%;
+  margin-bottom: -2em;
+  transition: background-position 0.35s ease-in-out, color 0.35s ease-in-out;
+}
+
+#moon:hover,
+#sun:hover {
+  background-position: -100% 0;
+  color: var(--bg-color);
+}
+
+@keyframes floatDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.button-wrapper canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    padding-bottom: 4em;
+}
+  
+.confetti-button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding-bottom: 18em;
+}
+  
+.attribution {
+    text-align: center;
+    font-size: 1em;
+    color: var(--text-color);
+    margin-top: 6em;
+}
+  
+.attribution a {
+    text-decoration: none;
+    color: var(--main-color);
+    transition: 0.4s ease-in-out;
+}
+  
+.attribution a:hover {
+    font-size: 2em;
+}
+
+#announce {
+    margin-top: -3em;
+}
